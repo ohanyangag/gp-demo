@@ -18,7 +18,8 @@
         <button id="reset">reset</button>
         <span>Count: <span id="value"></span></span>
         
-        <button id="ad">ad</button>
+        <button id="ad-page">ad by page</button>
+        <button id="ad-popup">ad by popup</button>
     </div>
 
     <script>
@@ -35,13 +36,22 @@
             document.getElementById('value').innerText = counter;
         })  
 
-        document.getElementById('ad').addEventListener('click', function() {
+        document.getElementById('ad-page').addEventListener('click', function() {
             show_9725005().then(() => {
-                alert('You have seen an ad!');
+                alert('You have seen an ad by page!');
             })        
         })  
+        
+        document.getElementById('ad-popup').addEventListener('click', function() {
+            show_9725005('pop').then(() => {
+                alert('You have seen an ad by popup!');
+            }).catch(e => {
+                alert('Something goes wrong !!!');
+            })      
+        }) 
     </script>
 </body>
 
 </html>
+
 

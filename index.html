@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Application</title>
+    <style>
+        div {
+          text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button id="count">count</button>
+        <button id="reset">reset</button>
+        <span>Count: <span id="value"></span></span>
+    </div>
+
+    <script>
+        let counter = 0;
+        document.getElementById('value').innerText = counter;
+
+        document.getElementById('count').addEventListener('click', function() {
+            counter++;
+            document.getElementById('value').innerText = counter;
+        })
+        
+        document.getElementById('reset').addEventListener('click', function() {
+            counter = 0;
+            document.getElementById('value').innerText = counter;
+        })  
+    </script>
+</body>
+</html>
